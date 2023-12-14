@@ -1,0 +1,10 @@
+###############TCPdump Example################
+tcpdump -i eth1
+tcpdump -I eth0 port 443
+tcmdump -I eth0 src 192.168.0.1
+tcpdump -i bond0 -nn -e vlan | grep "vlan 81"
+Tcpdump -I any -vvnee arp/icmp
+#to sniffer ICMP IPv6
+tcpdump -i eth0 icmp6
+#to sniffer dhcpv6
+tcpdump -i <interface name> -n -vv ‘(udp port 546 or 547) or icmp6’
